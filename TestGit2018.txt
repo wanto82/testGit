@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 mmmm
+=======
+Okeee..
+GGGGG
+>>>>>>> ad80385ee180bd442ecc1b827030d64149a2f197
