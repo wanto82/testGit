@@ -1,0 +1,73 @@
+expdp root_backup/reza DIRECTORY='FILE_BACKUP' DUMPFILE=root_backup.dmp LOGFILE=root_backup_export.log
+
+expdp root_backup/reza tables=root_backup.BNI_DIVISI DIRECTORY='FILE_BACKUP' dumpfile=emp_export.dmp logfile=emp_export.log
+
+expdp root_backup/reza DIRECTORY=FILE_BACKUP dumpfile=emp_export.dmp schemas=root_backup logfile=emp_export.log
+
+imp atlantis/atlantis@orcl file=E:\ABCD1_EXCLUDE_CLOB_TABS_BAK.dmp indexfile=index.sql full=y log=imp.log
+
+impdp root_backup/reza tables=scott.emp,scott.dept directory=data_pump_bkup dumpfile=emp_dept_export.dmp logfile=emp_dept_import.log
+
+impdp user/password DUMPFILE=file_name directory=dir LOGFILE=test.log REMAP_SCHEMA=USERA:USERB TABLE_EXISTS_ACTION=APPEND
+
+expdp root_backup/reza tables=root_backup.BNI_DIVISI,root_backup.BNI_unit DIRECTORY=FILE_BACKUP dumpfile=emp_export.dmp logfile=emp_export.log
+
+impdp root_backup/reza tables=root_backup.BNI_DIVISI,root_backup.BNI_unit TABLE_EXISTS_ACTION=REPLACE DIRECTORY=FILE_BACKUP dumpfile=emp_export.dmp logfile=emp_import.log
+
+exp scott/tiger tables=emp query=\"where deptno=10\"
+
+exp root_backup/reza tables=BNI_DIVISI,BNI_unit compress=y file=C:\cp\backupDB\test\emp_export.dmp log=C:\cp\backupDB\test\emp_export.log
+
+imp root_backup/reza tables=BNI_UNIT,BNI_DIVISI ignore=y file=C:\cp\backupDB\test\emp_export.dmp
+
+exp root_backup/reza owner=root_backup file=C:\cp\backupDB\test\emp_export_schemas.dmp log=C:\cp\backupDB\test\emp_export_schemas.log
+
+imp root_backup/reza fromuser=root_backup touser=root_backup ignore=y file=C:\cp\backupDB\test\emp_export_schemas.dmp
+
+exp root5/reza tables=BNI_BANK,BNI_CABANG,BNI_ICONS,BNI_ICONS_INCOMING,BNI_ICONS_OUTGOING,BNI_MS,BNI_RTGS_BI,BNI_RTGS_OUTGOING,BNI_SWIFT,BNI_TTC,BNI_WILAYAH compress=y file=C:\cp\backupDB\test\Root5_export.dmp log=C:\cp\backupDB\test\Root_export.log
+exp root5/reza tables=BNI_SWIFT compress=y file=D:\BackupDB\20190130_tb_schemasLocal.dmp log=D:\BackupDB\20190130_tb_schemasLocal.log
+imp root5/reza tables=BNI_SWIFT ignore=y file=D:\BackupDB\20190130_tb_schemasLocal.dmp
+exp root5/reza owner=root5 file=C:\cp\backupDB\test\5emp_export_schemas.dmp log=C:\cp\backupDB\test\5emp_export_schemas.log
+
+exp ROOT5/REZA owner=ROOT5 file=D:\BackupDB\20190215_root5_schemasLocal.dmp log=D:\BackupDB\20190215_root5_schemasLocal.log
+drop user root5 cascade;
+create user root5 identified by reza
+grant connect, resource, imp_full_database, exp_full_database to root5
+imp root5/reza fromuser=root5 touser=root5 ignore=y file=D:\BackupDB\20190130_root5_schemasLocal.dmp
+
+exp root5/reza@localhost:1521/XE tables=BNI_ICONS_INCOMING compress=y file=C:\cp\backupDB\test\BNI_ICONS_INCOMING_lokal_export.dmp log=C:\cp\backupDB\test\BNI_ICONS_INCOMING_lokal_export.log
+windows server 2008. Administrator Tools>windows server with advanced security> inbound rules> new rule> pilih port> tcp> isi port>allow the connection
+C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+exp spanview/spanview#123 owner=spanview file=D:\aa\atrium_xsis\eky\backupDB\20180328_root2_schemasLocal_spanview.dmp log=D:\aa\atrium_xsis\eky\backupDB\20180328_root2_schemasLocal_spanview.log
+
+// check tablespaces free
+SELECT df.tablespace_name "Tablespace",
+  totalusedspace "Used MB",
+  (df.totalspace - tu.totalusedspace) "Free MB",
+  df.totalspace "Total MB",
+  ROUND(100 * ( (df.totalspace - tu.totalusedspace)/ df.totalspace)) "% Free"
+FROM
+  (SELECT tablespace_name,
+    ROUND(SUM(bytes) / 1048576) TotalSpace
+  FROM dba_data_files
+  GROUP BY tablespace_name
+  ) df,
+  (SELECT ROUND(SUM(bytes)/(1024*1024)) totalusedspace,
+    tablespace_name
+  FROM dba_segments
+  GROUP BY tablespace_name
+  ) tu
+WHERE df.tablespace_name = tu.tablespace_name;
+
+select b.tablespace_name, tbs_size SizeMb, a.free_space FreeMb
+from  (select tablespace_name, round(sum(bytes)/1024/1024 ,2) as free_space
+       from dba_free_space
+       group by tablespace_name) a,
+      (select tablespace_name, sum(bytes)/1024/1024 as tbs_size
+       from dba_data_files
+       group by tablespace_name) b
+where a.tablespace_name(+)=b.tablespace_name;
+
+select * from dba_data_files
+
