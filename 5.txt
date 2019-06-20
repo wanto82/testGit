@@ -30,6 +30,7 @@ imp root5/reza tables=BNI_SWIFT ignore=y file=D:\BackupDB\20190130_tb_schemasLoc
 exp root5/reza owner=root5 file=C:\cp\backupDB\test\5emp_export_schemas.dmp log=C:\cp\backupDB\test\5emp_export_schemas.log
 
 exp ROOT5/REZA owner=ROOT5 file=D:\BackupDB\20190215_root5_schemasLocal.dmp log=D:\BackupDB\20190215_root5_schemasLocal.log
+exp ROOT5/REZA@192.168.3.181:1521/XE owner=ROOT5 file=D:\Kantor BNI\Backup_DB192_168_3_181\20190620_root5_schemasLocal.dmp log=D:\BackupDB\20190620_root5_schemasLocal.log
 drop user root5 cascade;
 create user root5 identified by reza
 grant connect, resource, imp_full_database, exp_full_database to root5
