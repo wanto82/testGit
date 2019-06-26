@@ -1,0 +1,260 @@
+port ftp:14147
+https://thepiratebay.cr/
+
+ftp:
+roles, IIS, FTP, FTP SSL Settigs, Allow SSL Connections
+
+150120.001
+75D17E66
+ChangeIP.com
+Gratis 7 sub domains, dalam arti anda bisa mempunyai 7 nama sub domain dengan IP Public yang berbeda.
+
+NoIP.com
+Gratis 3 sub domains, dalam arti anda bisa mempunyai 3 nama sub domain dengan IP Public yang berbeda.
+
+run catalina.bat
+SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_25
+SET JAVA_HOME=C:\Program Files\Java\jre7
+SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_79
+SET JRE_HOME=C:\Program Files (x86)\Java\jdk1.6.0_25 windows server 2003
+startup.bat
+
+-XX:+HeapDumpOnOutOfMemoryError MAT
+-Dcatalina.base="D:\PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp2" -Dcatalina.home="D:\apache-tomcat-7.0.28" -Dwtp.deploy="D:\PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\wtpwebapps" -Djava.endorsed.dirs="D:\apache-tomcat-7.0.28\endorsed"
+http://download.eclipse.org/birt/update-site/4.3
+http://download.eclipse.org/mat/1.4/update-site/
+Junit : klik kanan (file BniTest.java), run configurations. isi VM Arguments : -XX:+HeapDumpOnOutOfMemoryError
+increase java heap. isi VM Arguments : -Xms512M -Xmx1024M
+cek command prompt java heap :
+cek initial -Xms : javaw -XX:+PrintFlagsFinal | find "InitialHeapSize"
+cek max heap -Xmx : javaw -XX:+PrintFlagsFinal | find "MaxHeapSize"
+
+
+RESTClient :
+Headers :  Content-Type: application/json
+Body : { "id":"p0001" } / [{ "id":"p0001" }, { "id":"p0002" }]
+
+
+build path :web toolkit harus dicentang GWT SDK
+klik kanan: google :GWT compile
+export data :
+folder di bawah war=> archieve file
+
+http://localhost:8081/PurcSecur/
+user :123
+pass :123
+
+Cek Session Oracle :
+select * from V$resource_limit
+select pid, spid, addr, program
+from v$process
+where addr not in (
+select paddr from v$session
+)
+
+select paddr from v$session
+select * from v$version;
+
+
+export jar:
+Runnable jar file.
+pilih class main di Launch configuration.
+buat nama file.jar di export destination
+run java : java -jar Java2Demo.jar
+
+file library:
+jangan diikutkan JUnit jgn diikutkan di deploy assembly./ lib akan error
+
+
+svn lalukan instal visualsvn server.
+install torsoisesvn
+buat create new repository dan akses user password di visualsvn server.
+buat folder baru di repobroser klik kanan toirtoise.mis : aa
+import folder di klik kanan toirtoise.ke folder aa.
+checkout project.
+
+copy project eclipse.. 
+buat folder baru di repobroser klik kanan toirtoise.mis : aa
+import svn aa. 
+checkout from svn. pilih check out as a project in the workspace.
+klik kanan project. project facets centang dynamic web project, java, javascript
+copy project dan lib ke project baru..
+
+
+di ie ada console.log(function tidak jalan);
+
+ganti nama class hibernate.
+1. refactor class
+2. searching dule.file centang case sensitive dan regular expression(huruf depan class besar). dan replace.
+3. searching dule.file centang case sensitive dan regular expression(huruf depan class kecil). dan replace.
+
+
+port tomcat ganti tidak boleh sama ada 3:
+1.shutdown
+2.http
+3.ajp
+
+untuk file selain gambar. bisa pake: c:/folder (cuma utk download sj)
+
+untuk buat username / schema baru cukup copy/clone dari schema HR(expired dll ubah dulu)
+toad di 64bit install di selain program files (jk tdk connection not open) dan ubah SET JAVA_HOME mjd JRE_HOME
+export 1 login sbg sysdba yg aktif. user export.
+import login sbg system(sysdba). pilih from: root. to: root
+toad stream read error :
+1.C:\Users\Lenovo\AppData\Roaming\Quest Software\Toad for Oracle\10.0\User Files\GUISettings
+2.copy folder GUISettings mjd GUISettingsBackup.
+3.hapus isi folder GUISettings.
+
+file deploy war sesuaikan jdk nya di properties. java build path dan java compiler. serta urutan java di order and export
+
+
+install virtualbox, start select ubuntu iso
+settings network sesuai di folder span(file web html).
+sudo apt-get install openssh-server
+telnet localhost 22
+sudo apt-get install virtualbox
+sudo tasksel install virt-host
+
+grep xx "cari" namafile / *
+grep -i -n n "cari" namafile / *
+-n : tiap baris
+-c : jumlah baris sama
+-v -c : jumlah baris tidak sama
+-r : semua directory
+-i : ignorecase
+520.*xml
+^Mr : awalan Mr
+Mr$ : akhiran Mr
+[^Mr] : tidak megandung Mr
+
+ls
+ls -l : file dll
+ls -lS : urut size.
+ls -lt : urut modify
+ls -1 : hanya nama file/folder
+
+find
+find . -name "*a.txt"
+find . -iname "*a.txt" (insensitive)
+find . -type f -name "*a.txt" (type file)
+find . -type d -name "*a.txt" (type folder)
+
+.sh :
+login as reza123
+chmod 755 morning
+./outlet.sh
+vi outlet.sh
+check path sh : which sh / whereis sh
+esc : mode perintah, i : mode insert.
+file sh muncul pesan bad interpreter: No such file or directory (:set fileformat=unix)
+save&exit (tulis :wq enter), exit (tulis :q enter)  >> harus tekan esc dulu (mode perintah) insert/edit text tekan i
+crontab: pertama kali jalankan vi sbg editornya > VISUAL=vi crontab -e
+cek crontab: ps -ef | grep cron | grep -v grep
+cek edit crontab berdasarkan user: crontab -u root -e
+penting cek dan edit running crontab: crontab -e
+ganti editor crontab: export EDITOR=vim
+
+java unix:
+buat folder jdk1.6 : /usr/lib/jvm/jdk1.6
+copy file jdk1.6.tar.gz ke jdk1.6
+extract : tar -xvf jdk1.6.tar.gz
+cek pilihan java : sudo update-alternatives --config java (ada pilihan 0/1/2)
+install : sudo update-alternatives --install /usr/
+
+
+interface : pemakaian class tanpa harus tahu isi dari implementasi method. 
+	    interface jg memudahkan untuk dipakai beberapa class.
+		JTextArea impelements onClick, onChange.
+Abstarct class: class dibuat karena tidak tahu harus diisi implementasi 
+	    apa pada method2nya. 
+
+
+xml to xsd : c:\xmlbeans-2.5.0\bin>c:\xmlbeans-2.5.0\bin\inst2xsd -outDir c:/temp -outPrefix books.xsd c:\temp\books.xml
+xsd to jar : scomp -compiler c:\progrmfiles\java\jdk\bin\javac -out c:\aa\temp.jar temp.xsd
+
+java to xsd : new, others, jaxb, select class2.
+xsd to java : klik kanan file xsd. generate, jaxb class, beri nama package
+xsd file : servlet xml == id="kk" >>kk.wsdl dan portname="ProdukPort" 
+<wsdl:service name="ProdukPortService">
+<wsdl:portType name="ProdukPort">interface @WebService(name = "ProdukPort" 
+dan method2 hrs sama <wsdl:operation name="produk">
+copy java DTO ke client (jika tidak diclient id_produk mjd idProduk = bisa diubah id_produk lagi)
+
+
+prodResponse dan prodrequest  nama = prod (method / wsdl:operation name="prod").
+.java => .xsd + qualified => client (.java) dan server (copy dr client ObjectFactory & pack info)
+
+
+maven :
+install: http://download.eclipse.org/technology/m2e/releases
+jika. pas buat maven project baru error : maven-compiler-plugin. hapus semua folder di : C:\Users\Lenovo\.m2\repository
+1. windows, preferences, network. proxy direct.
+2. windows, preferences, maven, user setting, buat/update settings.xml (<proxy><active>false</active>)
+3. create new, maven project, Catalog:internal, Arifact Id: maven-archetype-webapp
+
+1.new maven project. pilih Catalog : Internal. 
+di tabel kolom ArifacId : maven-archetype-webapp. next. 
+isi package : org.bni
+2. klik kanan project. properties. project facets.convert to faceted form.. 
+centang  dynamic web module, java, javascript. runtime : tomcat 7
+3. klik link :  Further configuration available. ubah Content directory : src/main/webapp
+4. add deploy assemblay: maven dependencies.
+copy file di pom.xml lama dari <properties> s/d </dependencies> ke pom.xml project baru
+
+typescript eclipse : 
+ok : http://www.genuitec.com/updates/webclipse/neon/
+https://marketplace.eclipse.org/content/angular-ide
+https://marketplace.eclipse.org/content/typescript-ide
+http://oss.opensagres.fr/angular2-eclipse/1.3.0/
+
+pilih classic,
+- Get started with Angular development..
+- Try an example Angular
+
+
+android maven :
+1. Create a new Maven Project (File -> New -> Project... then select Maven -> Maven Project).
+2. When prompted to Select Archetype click Add Archetype...
+3. In the dialog that appears enter "de.akquinet.android.archetypes" for Archetype Group Id.
+4. In Archetype Artifact Id enter "android-quickstart".
+5. In Archetype Version enter "1.0.10" and continue.
+6. When prompted enter your desired project group and artifact ID, version and, optionally, set the "platform" property for the Android version (defaults to '16').
+7. Click Finish
+atau
+ mvn archetype:generate \
+  -DarchetypeArtifactId=android-quickstart \
+  -DarchetypeGroupId=de.akquinet.android.archetypes \
+  -DarchetypeVersion=1.0.6 \
+  -DgroupId=your.company \
+  -DartifactId=my-android-application
+1. create maven project
+2. Catalog. pilih Nexus Indexer
+3. Group id : de.akquinet.android.archetypes
+create maven project, klik kanan : maven, update project, 
+klik kanan properties :android, pilih android 7.0(Project built target)
+buang @Override, centang order and export: android(properties)
+
+
+svn conflict :
+1. copy isi file asli ke notepad.
+2. klik kanan file. update to HEAD.
+3. klik kanan file conflict. Mark resolved...
+4. copy file ori di notepad ke file.
+
+
+html rowspan(>) & colspan(v)== buat kiri dan atas dahulu (baris atas)
+buat lihat tr / baris paling atas dulu (penting)
+
+SQL> CREATE INDEX employee_last_name_idx ON employee(last_name);
+SQL> drop index employee_last_name_idx;
+
+hilangin undifined ng-app di eclipse :
+preferences, web, html files, validation, add di attribute : ng-*
+
+http://plugins.genymotion.com/eclipse
+uncheck : Group items by category
+menu : window, preferences, browse : c://programfiles/genymotion
+ip localhost : Use 10.0.2.2 for default AVD and 10.0.3.2 for genymotion.
+eclipse : run configurations, tab : target, pilih : always prompt to pickup devide.
+jalankan icons genymotion. jika gagal log off komputer.
+cek ip localhost di emulator. pake : ip:8080/bniOpr
