@@ -1,0 +1,255 @@
+Gak ada teori saklek tentang cinta.. semuanya bisa aja bener, bisa saja salah..
+saran gw ke orang yang lg jatuh cinta/pdkt, turutin aja kata hati lo.. gak usah denger/aplikasiin Teori A atau Teori B, nikmatin aja prosesnya.. jatuh bangunnya.. dengan cara yang menurut lo terbaik..
+karna pada akhirnya, terlepas dari lo jadi pacaran apa kaga, lo bisa bersyukur karna lo ngerasain yg namanya jatuh cinta..
+Itu yg terpenting kalo menurut gw..
+
+gampang. Yg udah gw praktekin, banyak main game yg ada ngobrol2nya, 
+sama liat film yg text nya bhs inggris. Jgn berusaha mengartikan tiap kata, 
+tp ckp rasakan artinya dg naluri. 
+Ntar kamu ngerti bhs inggris tanpa perlu ngerti arti indonesianya. 
+Mudah, ga perlu belajar 2x
+
+select count(*) as Record, TO_CHAR(sum(amount),'L999G999G999G999G999G999') AS Total_Amount from span_file_content  where document_date='2015-03-24' and payment_method='0'
+0=overbocking
+1=rtgs
+2=kliring
+
+iBANK DB
+IP:192.168.163.3
+Port:1622
+Service:FINEBNI
+User:ro_ececuser02
+pass :roec02
+
+\\10.70.12.98\film & tv series\FILM
+user: ftpuser
+pass: ftpuser
+
+eoffice : bni1946
+
+epay : 167447
+
+192.168.68.28:21
+ftp 
+user/pass:gwuser/gwpass
+/home/gwuser/data/ibank/corp/statement
+
+contoh: #990318280289 lalu tekan call
+TARIF: Rp. 1.500/ 5 menit
+
+Misalkan kita mau mendepositokan uang sebesar Rp.10 jt maka bunga bersih yang kita terima adalah (asumsi bunga deposito 5%) :
+5 (bunga) / 12 bulan = 0,41666667% perbulan
+0,41666667% x Rp. 10 jt = Rp. 41.666,667
+Pajak Deposito : 20% x Rp. 41.666,667 = Rp. 8333,3334
+Pendapatan bersih yang kita dapat setiap bulan adalah :
+Rp. 41.666,667 - Rp. 8333,3334 = Rp. 33.333,333
+
+icons user:91568. pass:milanisti18. kodecabang:718. no terminal:88
+menu:450. rekening :296474176. dropping dana. kode cabang:995 (penihilan kosongin)
+depkeu user:BNI. password: 56843427
+
+pg user:37559 pass:1
+Bang Erwin : 8488
+cupie	: 9250.
+joko sp :  6214
+
+
+span bni user&password:hdetek01
+pvcs tracker:user hendi.wicaksono pass 06131125
+usr reza.backsin
+pwd bni46
+
+usr novi.noya
+pass : bni31139
+https://recruitment.bni.co.id/
+agus.prima   bni20141
+sakti.pratama pass: otisvm85
+
+ATM wistheling
+https://192.168.98.137/UI
+reza
+bni46SQL
+
+
+icons
+user :31086
+pass :h31086 (jika expired ganti h mjd o atau l) =urutan choliq
+cabang :718
+19
+
+AGEN46 & BANSOS
+Terkait tools tersebut sekarang dapat diakses dengan url :
+1.	Keagenan	 à 172.18.1.166:120/agen_46/
+2.	Bansos		 à 172.18.1.166:120/bansos/
+3.	Unikqu 		à 172.18.1.166:120/unikqu/
+
+
+BS : 192.168.65.113
+user:etlftp
+pass:xxxx
+remoteDir:/home/etl/files/span/resproc
+
+BPS
+ip:192.168.68.28
+port:1535
+sid:gwprod
+user:recon
+pass:reconpass
+tb:atm_payment_trf
+
+hafidz: 9250
+
+RC : 192.168.68.28
+user:gwsuer
+pass:xxx
+remoteDir: /home/gwuser/data/ibank/corp/statement
+
+epurse
+192.168.3.32/bni/login.html
+user : 31125
+pass : reza31777
+
+BPS
+192.168.12.79
+user :31777
+pass :reza31777
+
+FINEBNI
+u:ro_ececuser02
+p:roec02
+
+
+
+http://spoolsys.bni.co.id/wccommonservices/
+user hdeusr
+pass hdepass0
+
+http://mis.bni.co.id/srp/index.php
+user 31562mpk
+pass 31562
+
+16/04 update aplikasi dan server ke java versi jdk1.7 karena ada alert di server database SOA 
+
+
+
+recon rc vs bs
+baca snmp router sisco
+cr aktifin tanggal monitoring kontrak divisi PFA
+
+update root2.bni_request_proses set nomor = nomor+1 where nomor between 240 and 244
+select length(keterangan) from root.bni_user_group  
+update root.bni_user_group set keterangan=concat(concat(substr(keterangan,1,10),'1'),substr(keterangan,11,length(keterangan)-10))
+update root.bni_user_group set keterangan=concat(concat(substr(keterangan,1,10),''),substr(keterangan,12,length(keterangan)-10))
+
+update root.test set str=concat(concat(substr(str,1,2),'a'),substr(str,3,length(str)-2))
+3=2+1
+length(str)-2 (asal 2) = substr(str,1,2)
+kurangi menu asal 3 + 1 mjd 4
+update root.test set str=concat(concat(substr(str,1,2),''),substr(str,4,length(str)-2))
+
+mstsc /admin  kill session remote desktop
+
+D:\PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bniPengadaanWebChart2
+
+select distinct(channel) from root.mhp_trx_summary
+
+select distinct(biller) from root.mhp_trx_summary
+
+select distinct(financial_status) from root.mhp_trx_summary
+
+select distinct(flagging_status) from root.mhp_trx_summary
+
+@sarahsinga
+@aleyna
+
+guest008
+guest009
+
+bni2011wifitek01;
+
+hq\30466
+password
+
+XE=
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=Lenovo-PC)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SERVER=dedicated)
+      (SERVICE_NAME=XE)
+    )
+  )
+
+D:\PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bniPengadaanWebChart2\imagesIbank\
+
+hq\820581
+w12348765
+
+hq\820945
+fadli08
+dns : 192.168.45.22 & 21
+
+172.18.0.70
+singgih: akatsuki
+fadli: 820642
+faisol: 820452
+andri : 820498
+bang pras: abu alif
+
+https://spancms.bni.co.id/report/account-validation-single.htm
+span user/pass:hdetek
+http://172.23.200.124/viewdata.aspx?id=2&np=820581&bu=2&ta=2014
+
+192.168.46.1
+port:8080
+
+hq\29382
+password
+
+http://172.18.3.250:8080/bniPengadaanWeb/login.htm
+
+http://172.18.2.135/chart/index.htm
+admin
+sarimin
+bni123/
+
+hS2zo43rG2
+
+buat proses bisnis dulu
+
+filezilla
+port:14147
+
+server pass: tulus5358
+fedora hostname : localhost
+password : reza123
+
+
+
+ftp bni:
+172.18.2.230
+user:mamen
+pass:mameny2k
+
+
+server
+Administrator
+pass:tulus5358
+
+bang henry
+tulus003
+
+m rina: Hairina Rosdiyani <rina.rosdiyani@bni.co.id> 70723 8340
+m lia: 70723 8310
+
+habis taruh file ispring ppt. buka firefox. task mngr(paksa kill proses)
+
+
+
+27/01 add alur span di service catalog
+report rc to .csv
+
+06/02 recon span gaji rekening 303.
