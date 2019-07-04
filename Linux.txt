@@ -2,3 +2,4 @@ cek version unix :
 uname -a
 lsb_release -a
 
+https://www.networkworld.com/article/3284105/linux-control-sequence-tricks.html
