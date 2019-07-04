@@ -79,9 +79,9 @@ cabang :718
 
 AGEN46 & BANSOS
 Terkait tools tersebut sekarang dapat diakses dengan url :
-1.	Keagenan	 à 172.18.1.166:120/agen_46/
-2.	Bansos		 à 172.18.1.166:120/bansos/
-3.	Unikqu 		à 172.18.1.166:120/unikqu/
+1.	Keagenan	 Ã  172.18.1.166:120/agen_46/
+2.	Bansos		 Ã  172.18.1.166:120/bansos/
+3.	Unikqu 		Ã  172.18.1.166:120/unikqu/
 
 
 BS : 192.168.65.113
@@ -226,6 +226,10 @@ port:14147
 server pass: tulus5358
 fedora hostname : localhost
 password : reza123
+
+192.168.12.184
+payroll
+payroll
 
 
 
