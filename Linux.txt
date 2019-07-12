@@ -4,3 +4,4 @@ lsb_release -a
 
 https://www.networkworld.com/article/3284105/linux-control-sequence-tricks.html
 https://medium.com/@fakiolinho/handle-blobs-requests-with-axios-the-right-way-bb905bdb1c04
+https://techmekrz.com/blogs/uploading-files-with-reactjs-and-nodejs
