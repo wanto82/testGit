@@ -38,6 +38,29 @@ grant connect, resource, imp_full_database, exp_full_database to root5
 imp root5/reza fromuser=root5 touser=root5 ignore=y file=D:\BackupDB\20190130_root5_schemasLocal.dmp
 imp root5/reza tables=BNI_CABANG,BNI_TTC,BNI_WILAYAH,BNI_DIVISI,BNI_KELOMPOK,BNI_PARAMETER,BNI_USER_GROUP,BNI_USER ignore=y file=D:\KantorBNI\Backup_DB192_168_3_181\2019UserDataOnly_Root5_export.dmp
 
+CREATE USER ROOT6 
+  IDENTIFIED BY reza
+  DEFAULT TABLESPACE USERS
+  TEMPORARY TABLESPACE TEMP
+  PROFILE DEFAULT
+  ACCOUNT UNLOCK;
+  -- 2 Roles for ROOT6 
+  GRANT CONNECT TO ROOT6;
+  GRANT RESOURCE TO ROOT6;
+  ALTER USER ROOT6 DEFAULT ROLE ALL;
+  -- 7 System Privileges for ROOT6 
+  GRANT CREATE SEQUENCE TO ROOT6;
+  GRANT CREATE VIEW TO ROOT6;
+  GRANT UNLIMITED TABLESPACE TO ROOT6;
+  GRANT CREATE SESSION TO ROOT6;
+  GRANT CREATE SYNONYM TO ROOT6;
+  GRANT ALTER SESSION TO ROOT6;
+  GRANT CREATE DATABASE LINK TO ROOT6;
+  -- 1 Tablespace Quota for ROOT6 
+  ALTER USER ROOT6 QUOTA UNLIMITED ON USERS;
+  -- 1 Object Privilege for ROOT6 
+    GRANT EXECUTE ON SYS.DBMS_STATS TO ROOT6;
+
 exp root5/reza@localhost:1521/XE tables=BNI_ICONS_INCOMING compress=y file=C:\cp\backupDB\test\BNI_ICONS_INCOMING_lokal_export.dmp log=C:\cp\backupDB\test\BNI_ICONS_INCOMING_lokal_export.log
 windows server 2008. Administrator Tools>windows server with advanced security> inbound rules> new rule> pilih port> tcp> isi port>allow the connection
 C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
