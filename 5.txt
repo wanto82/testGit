@@ -134,3 +134,14 @@ where a.tablespace_name(+)=b.tablespace_name;
 
 select * from dba_data_files
 
+select constraint_name,constraint_type 
+from user_constraints where 
+--table_name = 'BNI_MS_HEAD'
+table_name = 'BNI_MS'
+
+SELECT *  FROM user_constraints
+ WHERE -- constraint_name = 'FK_3JY3EUG12S9QM9F6UPRPLEQKN'
+R_CONSTRAINT_NAME='SYS_C0013029';
+ 
+alter table root5.BNI_MS_HEAD_AUD drop CONSTRAINT   SYS_C0013029
+alter table root5.BNI_MS_AUD drop CONSTRAINT   FK_3JY3EUG12S9QM9F6UPRPLEQKN
