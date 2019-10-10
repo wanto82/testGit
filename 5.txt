@@ -38,6 +38,15 @@ grant connect, resource, imp_full_database, exp_full_database to root5
 imp root5/reza fromuser=root5 touser=root5 ignore=y file=D:\BackupDB\20190130_root5_schemasLocal.dmp
 imp root5/reza tables=BNI_CABANG,BNI_TTC,BNI_WILAYAH,BNI_DIVISI,BNI_KELOMPOK,BNI_PARAMETER,BNI_USER_GROUP,BNI_USER ignore=y file=D:\KantorBNI\Backup_DB192_168_3_181\2019UserDataOnly_Root5_export.dmp
 
+cek oracle versions cmd : sqlplus 
+DATA_PUMP_DIR
+D:\OracleXE\app\oracle\admin\xe\dpdump\
+CREATE OR REPLACE DIRECTORY test_DATA_PUMP_DIR AS '/u01/app/oracle/oradata/';
+SELECT * FROM all_directories;
+GRANT READ, WRITE ON DIRECTORY DATA_PUMP_DIR TO MPN;
+expdp MPN/REZA owner=MPN VERSION=10.2 DIRECTORY=DATA_PUMP_DIR DUMPFILE=mpn_billingExpdp.dmp
+impdp mpn/reza DIRECTORY=DATA_PUMP_DIR DUMPFILE=mpn_billingExpdp.dmp
+
 CREATE USER ROOT6 
   IDENTIFIED BY reza
   DEFAULT TABLESPACE USERS
