@@ -39,7 +39,6 @@ imp root5/reza fromuser=root5 touser=root5 ignore=y file=D:\BackupDB\20190130_ro
 imp root5/reza tables=BNI_CABANG,BNI_TTC,BNI_WILAYAH,BNI_DIVISI,BNI_KELOMPOK,BNI_PARAMETER,BNI_USER_GROUP,BNI_USER ignore=y file=D:\KantorBNI\Backup_DB192_168_3_181\2019UserDataOnly_Root5_export.dmp
 
 cek oracle versions cmd : sqlplus 
-DATA_PUMP_DIR
 D:\OracleXE\app\oracle\admin\xe\dpdump\
 CREATE OR REPLACE DIRECTORY test_DATA_PUMP_DIR AS '/u01/app/oracle/oradata/';
 SELECT * FROM all_directories;
