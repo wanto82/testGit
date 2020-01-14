@@ -1,4 +1,5 @@
 cek version unix :
+cat /etc/os-release
 uname -a
 lsb_release -a
 
