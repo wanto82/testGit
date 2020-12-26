@@ -38,6 +38,13 @@ grant connect, resource, imp_full_database, exp_full_database to root5
 imp root5/reza fromuser=root5 touser=root5 ignore=y file=D:\BackupDB\20190130_root5_schemasLocal.dmp
 imp root5/reza tables=BNI_CABANG,BNI_TTC,BNI_WILAYAH,BNI_DIVISI,BNI_KELOMPOK,BNI_PARAMETER,BNI_USER_GROUP,BNI_USER ignore=y file=D:\KantorBNI\Backup_DB192_168_3_181\2019UserDataOnly_Root5_export.dmp
 
+BNI Konven
+exp root5/reza tables=BNI_BANK,BNI_CABANG,BNI_LIBUR,BNI_TTC,BNI_WILAYAH,BNI_DIVISI,BNI_KELOMPOK,BNI_PARAMETER,BNI_USER_GROUP,BNI_USER compress=y file=D:\BackupDB\2020\Root5MasterOnly_export.dmp log=D:\BackupDB\2020\Root5MasterOnly_export.log
+exp ROOT5/REZA owner=ROOT5 file=D:\BackupDB\2020\root5_schemasLocal.dmp log=D:\BackupDB\2020\root5_schemasLocal.log
+exp ROOT5/REZA owner=ROOT5 rows=n statistics=NONE constraints=n grants=n compress=y file=D:\BackupDB\2020\OnlyDB_root5_schemasLocal.dmp log=D:\BackupDB\2020\OnlyDB_root5_schemasLocal.log
+imp root5/reza fromuser=root5 touser=root5 ignore=y file=D:\BackupDB\2020\OnlyDB_root5_schemasLocal.dmp
+imp root5/reza tables=BNI_BANK,BNI_CABANG,BNI_LIBUR,BNI_TTC,BNI_WILAYAH,BNI_DIVISI,BNI_KELOMPOK,BNI_PARAMETER,BNI_USER_GROUP,BNI_USER ignore=y file=D:\BackupDB\2020\Root5MasterOnly_export.dmp
+
 cek oracle versions cmd : sqlplus 
 D:\OracleXE\app\oracle\admin\xe\dpdump\
 CREATE OR REPLACE DIRECTORY test_DATA_PUMP_DIR AS '/u01/app/oracle/oradata/';
